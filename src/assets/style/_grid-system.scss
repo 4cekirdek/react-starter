@@ -43,8 +43,8 @@
 
 @for $i from 1 through $colSize {
   .col-#{$i} {
-    flex: 0 0 percentage($i / $colSize);
-    max-width: percentage($i / $colSize);
+    flex: 0 0 calc($i / $colSize);
+    max-width: calc($i / $colSize);
 
     padding-left: 1rem;
     padding-right: 1rem;
@@ -55,7 +55,7 @@
   @for $i from 1 through $colSize {
     @include mediaMin($breakpoint) {
       .col-#{$breakpoint}-#{$i} {
-        width: percentage($i / $colSize);
+        width: calc($i / $colSize);
         float: left;
 
         padding-left: 1rem;
